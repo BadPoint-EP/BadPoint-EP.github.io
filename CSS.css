@@ -1,4 +1,6 @@
-/*skidding is nice */
+/* i love skidding */
+
+/* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
 html {
     box-sizing: border-box
 }
@@ -435,7 +437,8 @@ a {
 
 .w3-tooltip,
 .w3-display-container {
-    position: relative
+    position: relative;
+    z-index:2
 }
 
 .w3-tooltip .w3-text {
