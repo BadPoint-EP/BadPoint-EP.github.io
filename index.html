@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BadPoint</title>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BadPoint">
+    <meta property="og:description" content="A bad script for Entry Point in Roblox">
+    <meta property="og:footer" content="What a nice website.">
+    <meta name="theme-color" content="#FF2323">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="I_HpxEmCQLUUENi6bbaNWAj6Xec5N9OsiAQBg3AcwiA" />
     <link href="https://db.onlinewebfonts.com/c/c24180c2af724d57980d2fc6363be5da?family=NeoGram+W00+Medium"
         rel="stylesheet">
     <link href="https://db.onlinewebfonts.com/c/d50adafd81801bb32e3f05e70166eeab?family=NeoGram+W00+Bold"
@@ -142,6 +150,8 @@
             /* Optional: rounded corners */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             /* Optional: shadow */
+            transition: transform 0.3s ease;
+            /* Smooth transition */
         }
 
         .card h1,
@@ -161,6 +171,13 @@
             /* Optional: matches the frame's border radius */
             z-index: 1;
             /* Keeps the image unaffected by blur */
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            /* Move the card 10px up */
+            transition: transform 0.3s ease;
+            /* Smooth transition effect */
         }
 
         @media screen and (max-width: 750px) {
@@ -675,11 +692,10 @@
                 class="button1"><span>Github (Script) </span></a>
             <a href="https://discord.gg/VDQgaCxUtD" target="_blank" class="button1"><span>Discord </span></a>
         </div>
-        <div class="card" data-tilt data-tilt-gyroscope=false data-tilt-glare data-tilt-maxglare=0.8>
+        <div class="card">
             <img src="https://raw.githubusercontent.com/BadPoint-EP/BadPoint-EP.github.io/main/EP_bg.png" alt="Description of the image" class="card-image">
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 </body>
 
 </html>
