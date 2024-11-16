@@ -126,7 +126,7 @@
             transition: 0.3s;
         }
 
-        /* TILTING TEXTBOXES */
+        /* BOXES */
         .card {
             max-width: 400px;
             width: 90%;
@@ -140,51 +140,57 @@
             align-items: center;
             justify-content: center;
             background-color: rgba(10, 17, 29, 0.25);
-            /* 75% transparent */
             backdrop-filter: blur(3px);
-            /* Blur effect */
             border: 2px solid rgba(255, 255, 255, 0.75);
-            /* Optional: less transparent border */
             padding: 24px;
             border-radius: 8px;
-            /* Optional: rounded corners */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            /* Optional: shadow */
             transition: transform 0.3s ease;
-            /* Smooth transition */
-        }
-
-        .card h1,
-        .card p {
-            z-index: 1;
-            /* Keep text on top */
-            position: relative;
-            /* Ensure proper stacking */
+            margin: 20px 0;
         }
 
         .card img {
-            max-width: 115%;
-            /* Ensures the image fits within the frame */
-            max-height: 115%;
-            /* Maintains the aspect ratio */
+            max-width: 110%;
+            height: auto;
             border-radius: 8px;
-            /* Optional: matches the frame's border radius */
             z-index: 1;
-            /* Keeps the image unaffected by blur */
         }
 
         .card:hover {
             transform: translateY(-10px);
-            /* Move the card 10px up */
             transition: transform 0.3s ease;
-            /* Smooth transition effect */
         }
 
+        /* Media queries for better responsiveness */
         @media screen and (max-width: 750px) {
             .card {
                 width: 80%;
                 max-width: 300px;
-                padding: 16;
+                padding: 16px;
+            }
+
+            .container {
+                padding: 10px;
+                justify-content: flex-start;
+            }
+
+            .main-content {
+                padding: 10px 0;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 600px) {
+            .container {
+                min-height: auto;
+                padding: 20px;
+            }
+
+            .main-content {
+                margin-top: 0;
+            }
+
+            .card {
+                margin: 10px 0;
             }
         }
 
