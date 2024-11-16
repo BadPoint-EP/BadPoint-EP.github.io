@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>BadPoint</title>
-        <meta property="og:type" content="website">
-        <meta property="og:site_name" content="BadPoint">
-        <meta property="og:description" content="A bad script for Entry Point in Roblox">
-        <meta property="og:footer" content="What a nice website.">
-        <meta name="theme-color" content="#FF2323">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="google-site-verification" content="I_HpxEmCQLUUENi6bbaNWAj6Xec5N9OsiAQBg3AcwiA" />
-        <link href="https://db.onlinewebfonts.com/c/c24180c2af724d57980d2fc6363be5da?family=NeoGram+W00+Medium" rel="stylesheet">
-        <link href="https://db.onlinewebfonts.com/c/d50adafd81801bb32e3f05e70166eeab?family=NeoGram+W00+Bold" rel="stylesheet">
-        <style>
-            body {
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BadPoint</title>
+    <link href="https://db.onlinewebfonts.com/c/c24180c2af724d57980d2fc6363be5da?family=NeoGram+W00+Medium"
+        rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/d50adafd81801bb32e3f05e70166eeab?family=NeoGram+W00+Bold"
+        rel="stylesheet">
+    <style>
+        html,
+        body {
+            width: 100%;
             margin: 0;
             padding: 0;
             display: flex;
+            overflow-x: hidden;
             min-height: 100vh;
             background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
             color: #fff;
             font-family: 'NeoGram W00 Bold', 'NeoGram W00 Medium', Arial, sans-serif;
-            overflow: hidden
-            }
-            .container {
+        }
+
+        .container {
+            max-width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -33,25 +32,30 @@
             height: 100vh;
             position: relative;
             overflow: hidden;
-            }
-            .header {
+        }
+
+        .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 100%;
-            padding: 20px;
+            width: 95%;
+            padding: 5%;
             background-color: #0f0f0f;
-            }
-            .header a {
+        }
+
+        .header a {
             color: #ccc;
             text-decoration: none;
             margin-left: 20px;
-            }
-            .main-content {
+        }
+
+        .main-content {
             text-align: center;
             z-index: 1;
-            }
-            .main-content h1 {
+            max-width: 95%;
+        }
+
+        .main-content h1 {
             font-size: 48px;
             font-weight: bold;
             margin-bottom: 16px;
@@ -59,15 +63,18 @@
             background-image: linear-gradient(90deg, hsla(19, 74%, 59%, 1) 0%, hsla(0, 75%, 58%, 1) 100%);
             color: transparent;
             background-clip: text;
-            }
-            .main-content p {
+        }
+
+        .main-content p {
             font-size: 18px;
-            padding: 0 32px;
+            max-width: 95%;
+            padding: 0 5%;
             margin-bottom: 32px;
             color: #94A3B8;
             font-family: 'NeoGram W00 Medium', Arial, sans-serif;
-            }
-            .button1 {
+        }
+
+        .button1 {
             display: inline-block;
             background-color: #7A77FA;
             color: #fff;
@@ -77,72 +84,104 @@
             margin: 0 8px;
             margin-bottom: 32px;
             font-family: 'NeoGram W00 Bold', Arial, sans-serif;
-            }
-            .button1 span {
+        }
+
+        .button1 span {
             cursor: pointer;
             display: inline-block;
             position: relative;
             transition: 0.5s;
-            }
-            .button1 span:after {
+        }
+
+        .button1 span:after {
             content: '⋙';
             position: absolute;
             opacity: 0;
             top: 0;
             right: -20px;
             transition: 0.5s;
-            }
-            .button1:hover span {
+        }
+
+        .button1:hover span {
             padding-right: 25px;
-            }
-            .button1:hover span:after {
+        }
+
+        .button1:hover span:after {
             opacity: 1;
             right: 0;
-            }
-            .button1:hover {
+        }
+
+        .button1:hover {
             opacity: 1;
             background-color: #3E3BBE;
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
             transition: 0.3s;
-            }
-            /* TILTING TEXTBOXES */
-            .card {
-            width: 400px;
-            height: 200px;
-            overflow: hidden
+        }
+
+        /* TILTING TEXTBOXES */
+        .card {
+            max-width: 400px;
+            width: 90%;
+            height: auto;
+            aspect-ratio: 400/200;
+            overflow: hidden;
             font-size: 1.75rem;
             color: #fff;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: rgba(10, 17, 29, 0.25); /* 75% transparent */
-            backdrop-filter: blur(3px); /* Blur effect */
-            border: 2px solid rgba(255, 255, 255, 0.75); /* Optional: less transparent border */
-            padding: 20px;
-            border-radius: 8px; /* Optional: rounded corners */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: shadow */
+            background-color: rgba(10, 17, 29, 0.25);
+            /* 75% transparent */
+            backdrop-filter: blur(3px);
+            /* Blur effect */
+            border: 2px solid rgba(255, 255, 255, 0.75);
+            /* Optional: less transparent border */
+            padding: 24px;
+            border-radius: 8px;
+            /* Optional: rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            /* Optional: shadow */
+        }
+
+        .card h1,
+        .card p {
+            z-index: 1;
+            /* Keep text on top */
+            position: relative;
+            /* Ensure proper stacking */
+        }
+
+        .card img {
+            max-width: 115%;
+            /* Ensures the image fits within the frame */
+            max-height: 115%;
+            /* Maintains the aspect ratio */
+            border-radius: 8px;
+            /* Optional: matches the frame's border radius */
+            z-index: 1;
+            /* Keeps the image unaffected by blur */
+        }
+
+        @media screen and (max-width: 750px) {
+            .card {
+                width: 80%;
+                max-width: 300px;
+                padding: 16;
             }
-            .card h1, .card p {
-            z-index: 1; /* Keep text on top */
-            position: relative; /* Ensure proper stacking */
-            }
-            .card img {
-            max-width: 115%; /* Ensures the image fits within the frame */
-            max-height: 115%; /* Maintains the aspect ratio */
-            border-radius: 8px; /* Optional: matches the frame's border radius */
-            z-index: 1; /* Keeps the image unaffected by blur */
-            }
-            /* STARS BG */
-            .stars {
+        }
+
+        /* STARS BG */
+        .stars {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 120%;
             transform: rotate(-45deg);
-            }
-            .star {
+        }
+
+        .star {
             --star-color: var(--primary-color);
             --star-tail-length: 6em;
             --star-tail-height: 2px;
@@ -160,313 +199,366 @@
             filter: drop-shadow(0 0 6px currentColor);
             transform: translate3d(104em, 0, 0);
             animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
-            }
-            @media screen and (max-width: 750px) {
+        }
+
+        @media screen and (max-width: 750px) {
             .star {
-            animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
+                animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
             }
-            }
-            .star:nth-child(1) {
+        }
+
+        .star:nth-child(1) {
             --star-tail-length: 5.84em;
             --top-offset: 29.93vh;
             --fall-duration: 6.81s;
             --fall-delay: 3.648s;
-            }
-            .star:nth-child(2) {
+        }
+
+        .star:nth-child(2) {
             --star-tail-length: 5.56em;
             --top-offset: 44.64vh;
             --fall-duration: 7.933s;
             --fall-delay: 2.179s;
-            }
-            .star:nth-child(3) {
+        }
+
+        .star:nth-child(3) {
             --star-tail-length: 6.86em;
             --top-offset: 44.26vh;
             --fall-duration: 10.322s;
             --fall-delay: 1.059s;
-            }
-            .star:nth-child(4) {
+        }
+
+        .star:nth-child(4) {
             --star-tail-length: 6.24em;
             --top-offset: 87.36vh;
             --fall-duration: 11.784s;
             --fall-delay: 9.754s;
-            }
-            .star:nth-child(5) {
+        }
+
+        .star:nth-child(5) {
             --star-tail-length: 5.51em;
             --top-offset: 90.37vh;
             --fall-duration: 10.237s;
             --fall-delay: 5.036s;
-            }
-            .star:nth-child(6) {
+        }
+
+        .star:nth-child(6) {
             --star-tail-length: 6.38em;
             --top-offset: 52.4vh;
             --fall-duration: 11.586s;
             --fall-delay: 6.268s;
-            }
-            .star:nth-child(7) {
+        }
+
+        .star:nth-child(7) {
             --star-tail-length: 5.71em;
             --top-offset: 75.95vh;
             --fall-duration: 9.76s;
             --fall-delay: 0.777s;
-            }
-            .star:nth-child(8) {
+        }
+
+        .star:nth-child(8) {
             --star-tail-length: 5.12em;
             --top-offset: 92.2vh;
             --fall-duration: 8.867s;
             --fall-delay: 1.469s;
-            }
-            .star:nth-child(9) {
+        }
+
+        .star:nth-child(9) {
             --star-tail-length: 5.74em;
             --top-offset: 43.89vh;
             --fall-duration: 8.624s;
             --fall-delay: 1.491s;
-            }
-            .star:nth-child(10) {
+        }
+
+        .star:nth-child(10) {
             --star-tail-length: 6.43em;
             --top-offset: 25.41vh;
             --fall-duration: 6.743s;
             --fall-delay: 4.119s;
-            }
-            .star:nth-child(11) {
+        }
+
+        .star:nth-child(11) {
             --star-tail-length: 5.78em;
             --top-offset: 55.74vh;
             --fall-duration: 9.208s;
             --fall-delay: 1.78s;
-            }
-            .star:nth-child(12) {
+        }
+
+        .star:nth-child(12) {
             --star-tail-length: 5.45em;
             --top-offset: 0.22vh;
             --fall-duration: 8.11s;
             --fall-delay: 8.172s;
-            }
-            .star:nth-child(13) {
+        }
+
+        .star:nth-child(13) {
             --star-tail-length: 6.41em;
             --top-offset: 18.61vh;
             --fall-duration: 11.688s;
             --fall-delay: 4.347s;
-            }
-            .star:nth-child(14) {
+        }
+
+        .star:nth-child(14) {
             --star-tail-length: 7.22em;
             --top-offset: 48.8vh;
             --fall-duration: 10.11s;
             --fall-delay: 6.529s;
-            }
-            .star:nth-child(15) {
+        }
+
+        .star:nth-child(15) {
             --star-tail-length: 5.14em;
             --top-offset: 75.57vh;
             --fall-duration: 11.748s;
             --fall-delay: 1.743s;
-            }
-            .star:nth-child(16) {
+        }
+
+        .star:nth-child(16) {
             --star-tail-length: 5.96em;
             --top-offset: 51.98vh;
             --fall-duration: 8.577s;
             --fall-delay: 5.445s;
-            }
-            .star:nth-child(17) {
+        }
+
+        .star:nth-child(17) {
             --star-tail-length: 5.7em;
             --top-offset: 51.02vh;
             --fall-duration: 9.061s;
             --fall-delay: 6.741s;
-            }
-            .star:nth-child(18) {
+        }
+
+        .star:nth-child(18) {
             --star-tail-length: 6.44em;
             --top-offset: 18.62vh;
             --fall-duration: 7.559s;
             --fall-delay: 4.577s;
-            }
-            .star:nth-child(19) {
+        }
+
+        .star:nth-child(19) {
             --star-tail-length: 5.18em;
             --top-offset: 97.14vh;
             --fall-duration: 8.22s;
             --fall-delay: 2.221s;
-            }
-            .star:nth-child(20) {
+        }
+
+        .star:nth-child(20) {
             --star-tail-length: 7.16em;
             --top-offset: 81.62vh;
             --fall-duration: 7.926s;
             --fall-delay: 1.911s;
-            }
-            .star:nth-child(21) {
+        }
+
+        .star:nth-child(21) {
             --star-tail-length: 7.18em;
             --top-offset: 34.46vh;
             --fall-duration: 7.586s;
             --fall-delay: 1.353s;
-            }
-            .star:nth-child(22) {
+        }
+
+        .star:nth-child(22) {
             --star-tail-length: 6.56em;
             --top-offset: 61.87vh;
             --fall-duration: 11.643s;
             --fall-delay: 6.313s;
-            }
-            .star:nth-child(23) {
+        }
+
+        .star:nth-child(23) {
             --star-tail-length: 6.25em;
             --top-offset: 5.74vh;
             --fall-duration: 9.644s;
             --fall-delay: 9.295s;
-            }
-            .star:nth-child(24) {
+        }
+
+        .star:nth-child(24) {
             --star-tail-length: 7.11em;
             --top-offset: 75.27vh;
             --fall-duration: 7.116s;
             --fall-delay: 6.264s;
-            }
-            .star:nth-child(25) {
+        }
+
+        .star:nth-child(25) {
             --star-tail-length: 6.05em;
             --top-offset: 34.57vh;
             --fall-duration: 11.343s;
             --fall-delay: 4.906s;
-            }
-            .star:nth-child(26) {
+        }
+
+        .star:nth-child(26) {
             --star-tail-length: 5.41em;
             --top-offset: 8.79vh;
             --fall-duration: 9.949s;
             --fall-delay: 0.355s;
-            }
-            .star:nth-child(27) {
+        }
+
+        .star:nth-child(27) {
             --star-tail-length: 7.26em;
             --top-offset: 86.41vh;
             --fall-duration: 7.831s;
             --fall-delay: 0.489s;
-            }
-            .star:nth-child(28) {
+        }
+
+        .star:nth-child(28) {
             --star-tail-length: 7.12em;
             --top-offset: 80.61vh;
             --fall-duration: 7.266s;
             --fall-delay: 8.478s;
-            }
-            .star:nth-child(29) {
+        }
+
+        .star:nth-child(29) {
             --star-tail-length: 5.64em;
             --top-offset: 38.61vh;
             --fall-duration: 9.466s;
             --fall-delay: 9.7s;
-            }
-            .star:nth-child(30) {
+        }
+
+        .star:nth-child(30) {
             --star-tail-length: 5.45em;
             --top-offset: 42.17vh;
             --fall-duration: 11.549s;
             --fall-delay: 3.933s;
-            }
-            .star:nth-child(31) {
+        }
+
+        .star:nth-child(31) {
             --star-tail-length: 6.87em;
             --top-offset: 13.13vh;
             --fall-duration: 7.922s;
             --fall-delay: 6.681s;
-            }
-            .star:nth-child(32) {
+        }
+
+        .star:nth-child(32) {
             --star-tail-length: 7.5em;
             --top-offset: 32.59vh;
             --fall-duration: 10.593s;
             --fall-delay: 0.281s;
-            }
-            .star:nth-child(33) {
+        }
+
+        .star:nth-child(33) {
             --star-tail-length: 5.34em;
             --top-offset: 68.1vh;
             --fall-duration: 9.545s;
             --fall-delay: 4.201s;
-            }
-            .star:nth-child(34) {
+        }
+
+        .star:nth-child(34) {
             --star-tail-length: 7.41em;
             --top-offset: 99vh;
             --fall-duration: 10.175s;
             --fall-delay: 3.464s;
-            }
-            .star:nth-child(35) {
+        }
+
+        .star:nth-child(35) {
             --star-tail-length: 5.85em;
             --top-offset: 19.53vh;
             --fall-duration: 7.415s;
             --fall-delay: 2.384s;
-            }
-            .star:nth-child(36) {
+        }
+
+        .star:nth-child(36) {
             --star-tail-length: 6.34em;
             --top-offset: 0.79vh;
             --fall-duration: 8.079s;
             --fall-delay: 1.57s;
-            }
-            .star:nth-child(37) {
+        }
+
+        .star:nth-child(37) {
             --star-tail-length: 5.81em;
             --top-offset: 50.45vh;
             --fall-duration: 11.943s;
             --fall-delay: 9.151s;
-            }
-            .star:nth-child(38) {
+        }
+
+        .star:nth-child(38) {
             --star-tail-length: 7.01em;
             --top-offset: 23.94vh;
             --fall-duration: 11.047s;
             --fall-delay: 2.56s;
-            }
-            .star:nth-child(39) {
+        }
+
+        .star:nth-child(39) {
             --star-tail-length: 5.71em;
             --top-offset: 98.74vh;
             --fall-duration: 10.273s;
             --fall-delay: 1.919s;
-            }
-            .star:nth-child(40) {
+        }
+
+        .star:nth-child(40) {
             --star-tail-length: 5.07em;
             --top-offset: 80.44vh;
             --fall-duration: 9.196s;
             --fall-delay: 4.271s;
-            }
-            .star:nth-child(41) {
+        }
+
+        .star:nth-child(41) {
             --star-tail-length: 7.06em;
             --top-offset: 38.23vh;
             --fall-duration: 9.354s;
             --fall-delay: 0.055s;
-            }
-            .star:nth-child(42) {
+        }
+
+        .star:nth-child(42) {
             --star-tail-length: 6.54em;
             --top-offset: 88.91vh;
             --fall-duration: 8.922s;
             --fall-delay: 8.802s;
-            }
-            .star:nth-child(43) {
+        }
+
+        .star:nth-child(43) {
             --star-tail-length: 6.18em;
             --top-offset: 15.84vh;
             --fall-duration: 11.211s;
             --fall-delay: 6.697s;
-            }
-            .star:nth-child(44) {
+        }
+
+        .star:nth-child(44) {
             --star-tail-length: 6.94em;
             --top-offset: 66.96vh;
             --fall-duration: 6.744s;
             --fall-delay: 1.552s;
-            }
-            .star:nth-child(45) {
+        }
+
+        .star:nth-child(45) {
             --star-tail-length: 5.11em;
             --top-offset: 8.85vh;
             --fall-duration: 11.557s;
             --fall-delay: 1.296s;
-            }
-            .star:nth-child(46) {
+        }
+
+        .star:nth-child(46) {
             --star-tail-length: 5.3em;
             --top-offset: 96.61vh;
             --fall-duration: 8.383s;
             --fall-delay: 0.26s;
-            }
-            .star:nth-child(47) {
+        }
+
+        .star:nth-child(47) {
             --star-tail-length: 5.52em;
             --top-offset: 42.59vh;
             --fall-duration: 7.727s;
             --fall-delay: 5.622s;
-            }
-            .star:nth-child(48) {
+        }
+
+        .star:nth-child(48) {
             --star-tail-length: 7.42em;
             --top-offset: 31.75vh;
             --fall-duration: 11.27s;
             --fall-delay: 8.004s;
-            }
-            .star:nth-child(49) {
+        }
+
+        .star:nth-child(49) {
             --star-tail-length: 5.2em;
             --top-offset: 55.38vh;
             --fall-duration: 9.025s;
             --fall-delay: 1.988s;
-            }
-            .star:nth-child(50) {
+        }
+
+        .star:nth-child(50) {
             --star-tail-length: 6.69em;
             --top-offset: 19.32vh;
             --fall-duration: 8.172s;
             --fall-delay: 5.745s;
-            }
-            .star::before, .star::after {
+        }
+
+        .star::before,
+        .star::after {
             position: absolute;
             content: "";
             top: 0;
@@ -476,103 +568,118 @@
             background: linear-gradient(45deg, transparent, currentColor, transparent);
             border-radius: inherit;
             animation: blink 2s linear infinite;
-            }
-            .star::before {
+        }
+
+        .star::before {
             transform: rotate(45deg);
-            }
-            .star::after {
+        }
+
+        .star::after {
             transform: rotate(-45deg);
-            }
-            @keyframes fall {
+        }
+
+        @keyframes fall {
             to {
-            transform: translate3d(-30em, 0, 0);
+                transform: translate3d(-30em, 0, 0);
             }
-            }
-            @keyframes tail-fade {
-            0%, 50% {
-            width: var(--star-tail-length);
-            opacity: 1;
-            }
-            70%, 80% {
-            width: 0;
-            opacity: 0.4;
-            }
-            100% {
-            width: 0;
-            opacity: 0;
-            }
-            }
-            @keyframes blink {
+        }
+
+        @keyframes tail-fade {
+
+            0%,
             50% {
-            opacity: 0.6;
+                width: var(--star-tail-length);
+                opacity: 1;
             }
+
+            70%,
+            80% {
+                width: 0;
+                opacity: 0.4;
             }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="stars">
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-            </div>
-            <div class="main-content">
-                <h1>Revolutionizing the future of Entry Point scripts</h1>
-                <p>Elevate your gameplay with cutting-edge scripts designed to deliver a seamless, premium experience. Harness the power of the latest technologies to take your Entry Point adventure to unparalleled heights.</p>
-                <a href="https://github.com/bkkpro1980/BadPoint" target="_blank" class="button1"><span>Github (Script) </span></a>
-                <a href="https://discord.gg/VDQgaCxUtD" target="_blank" class="button1"><span>Discord </span></a>
-            </div>
-            <div class="card" data-tilt>
-                <img src="https://raw.githubusercontent.com/BadPoint-EP/BadPoint-EP.github.io/main/EP_bg.png" alt="Description of the image" class="card-image">
-            </div>
+
+            100% {
+                width: 0;
+                opacity: 0;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0.6;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-    </body>
+        <div class="main-content">
+            <h1>Revolutionizing the future of Entry Point scripts</h1>
+            <p>Elevate your gameplay with cutting-edge scripts designed to deliver a seamless, premium experience.
+                Harness the power of the latest technologies to take your Entry Point adventure to unparalleled heights.
+            </p>
+            <a href="https://github.com/bkkpro1980/BadPoint" target="_blank"
+                class="button1"><span>Github (Script) </span></a>
+            <a href="https://discord.gg/VDQgaCxUtD" target="_blank" class="button1"><span>Discord </span></a>
+        </div>
+        <div class="card" data-tilt data-tilt-gyroscope=false data-tilt-glare data-tilt-maxglare=0.8>
+            <img src="https://raw.githubusercontent.com/BadPoint-EP/BadPoint-EP.github.io/main/EP_bg.png" alt="Description of the image" class="card-image">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+</body>
+
 </html>
